@@ -1,7 +1,21 @@
-input {
+#nameinput {
   border-style: none;
 }
 
 .hide {
   display: none;
+}
+
+li {
+  list-style: none;
+}
+
+ul {
+  padding-left: 10px;
+}
+
+button {
+  
+  background: none;
+  border-style: none;
 }
