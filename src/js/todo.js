@@ -17,8 +17,6 @@ function deleteButton(event) {
   console.log(todos)
   event.target.parentElement.remove();
   todos = todos.filter((data) => parseInt(data.id) !== parseInt(li.id))
- 
-  console.log(li.id)
   saveTodos();
 }
 
@@ -28,11 +26,12 @@ function paintTodos(newtodo) {
   const listSpan = document.createElement("span");
   listSpan.innerText = newtodo.text;
   const button = document.createElement("button");
-  button.addEventListener("click", deleteButton);
+  list.addEventListener("click", deleteButton);
   button.innerText = "❌";
   todoList.appendChild(list);
+  
   list.appendChild(listSpan);
-  list.appendChild(button);
+  
 }
 
 function addList(event) {

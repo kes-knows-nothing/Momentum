@@ -28,7 +28,7 @@ function hello() {
   }else if (hour >= 4 && hour < 12) {
     nameBox.innerText = `Good Morning, ${username}`;
    } else {
-    nameBox.innerText = `Good Afternooon, ${username}`;
+    nameBox.innerText = `Good Afternoon, ${username}`;
    }
   }
 
@@ -63,6 +63,6 @@ if (savedUsername === null) {
   }else if (hour >= 4 && hour < 12) {
     nameBox.innerText = `Good Morning, ${savedUsername}`;
    } else {
-    nameBox.innerText = `Good Afternooon, ${savedUsername}`;
+    nameBox.innerText = `Good Afternoon, ${savedUsername}`;
    }
 }

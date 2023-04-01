@@ -1,3 +1,17 @@
+:root { font-family: 'Inter', sans-serif; }
+@supports (font-variation-settings: normal) {
+  :root { font-family: 'Inter var', sans-serif; }
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+}
+
 #nameinput {
   border-style: none;
 }
@@ -18,4 +32,116 @@ button {
   
   background: none;
   border-style: none;
+}
+
+img {
+  position:absolute;
+  width:100vw;
+  height:100vh;
+  left: 0px;
+  top: 0px;
+  right:0px;
+  bottom:0px;
+  z-index: -1;
+  opacity: 100%;
+  }
+
+
+#clock {
+  position: absolute;
+  bottom: 500px;
+  /* background-color: rgba(157, 192, 139, 0.3); */
+  color: #EDF1D6;
+  font-size: 12rem;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  padding: 0 25px 15px 20px;
+  border-radius: 1000px;
+  
+  }
+
+
+#mainBox {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#mainBox h2 {
+  position:absolute;
+  bottom: 400px;
+  color:antiquewhite;
+  font-size: 3rem;
+  margin-top: 0px;
+}
+
+#quoteBox {
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#quoteBox h3 {
+  font-size: 1.2rem;
+  color:antiquewhite;
+}
+
+#quoteBox h5 {
+  font-size: 0.8rem;
+  color:antiquewhite;
+  margin-top: 0px;
+}
+
+#todoinput {
+  position: absolute;
+  bottom: 350px;
+  right: 770px;
+  border-style: none;
+  background:none;
+  height: 5vh;
+  width: 25vw;
+  border-bottom: 2px solid antiquewhite;
+  font-size: 2rem;
+  outline: none;
+  color: antiquewhite;
+  text-align: center;
+}
+
+#todoinput::placeholder {
+  text-align: center;
+  color:azure;
+  opacity: 80%;
+}
+
+#todolist {
+  
+  position: absolute;
+  top: 750px
+}
+#todolist li {
+  margin-bottom: 10px;
+  display: block;
+  width: 25vw;
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+  
+}
+
+#todolist li button {
+  vertical-align: middle;
+}
+
+#weather {
+
+  position: absolute;
+  left:10px;
+  top: 5px;
+  color:azure;
+  font-size: 1.2rem;
 }

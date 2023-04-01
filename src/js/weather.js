@@ -1,4 +1,4 @@
-const API_KEY= config.apikey;
+const API_KEY= "";
 
 
 function onGeoOk(position) {
@@ -11,10 +11,11 @@ function onGeoOk(position) {
     .then((response) => response.json())
     .then((data) => {
       console.log(data)
-      const weather = document.querySelector("#weather span:first-child");
-      const city = document.querySelector("#weather span:last-child");
-      city.innerText = data.name;
+      const weather = document.querySelector("#weather span:last-child");
+      const city = document.querySelector("#weather span:first-child");
       weather.innerText = data.weather[0].main;
+      city.innerText = data.name + ":";
+      
     });
 }
 
