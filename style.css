@@ -9,7 +9,9 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   margin: 0;
+  
 }
 
 #nameinput {
@@ -48,6 +50,7 @@ img {
 
 
 #clock {
+  font-family:'Times New Roman', Times, serif;
   position: absolute;
   bottom: 500px;
   /* background-color: rgba(157, 192, 139, 0.3); */
@@ -70,6 +73,7 @@ img {
 }
 
 #mainBox h2 {
+  font-family:'Times New Roman', Times, serif;
   position:absolute;
   bottom: 400px;
   color:antiquewhite;
@@ -78,6 +82,7 @@ img {
 }
 
 #quoteBox {
+  font-family:'Times New Roman', Times, serif;
   position: absolute;
   bottom: 20px;
   display: flex;
@@ -89,18 +94,15 @@ img {
 #quoteBox h3 {
   font-size: 1.2rem;
   color:antiquewhite;
+  margin-bottom: 0;
 }
 
 #quoteBox h5 {
   font-size: 0.8rem;
   color:antiquewhite;
-  margin-top: 0px;
 }
 
 #todoinput {
-  position: absolute;
-  bottom: 350px;
-  right: 770px;
   border-style: none;
   background:none;
   height: 5vh;
@@ -110,9 +112,11 @@ img {
   outline: none;
   color: antiquewhite;
   text-align: center;
+  margin-top: 200px;
 }
 
 #todoinput::placeholder {
+  font-family:'Times New Roman', Times, serif;
   text-align: center;
   color:azure;
   opacity: 80%;
@@ -129,7 +133,6 @@ img {
   color: white;
   font-size: 1.5rem;
   text-align: center;
-  
 }
 
 #todolist li button {
@@ -137,9 +140,29 @@ img {
 }
 
 #weather {
+  font-family:'Times New Roman', Times, serif;
   position: absolute;
   left:10px;
   top: 5px;
   color:azure;
   font-size: 1.2rem;
+}
+
+#nameinput {
+  border-style: none;
+  background:none;
+  height: 5vh;
+  width: 25vw;
+  border-bottom: 2px solid antiquewhite;
+  font-size: 2rem;
+  outline: none;
+  color: antiquewhite;
+  text-align: center;
+}
+
+#nameinput::placeholder {
+  font-family:'Times New Roman', Times, serif;
+  text-align: center;
+  color:azure;
+  opacity: 80%;
 }

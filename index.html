@@ -17,12 +17,12 @@
   <div id="mainBox">
     <h1 id="clock"></h1>
     <form action="" id="nameForm">
-      <input id="nameinput" type="text" placeholder="Tell me what is your name.">
+      <input id="nameinput" type="text" placeholder="Tell me your name." autocomplete="off" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Tell me your name'">
     </form>
   </div>
  
   <form action="" id="todoform">
-    <input type="text" id="todoinput" placeholder="오늘은 무엇을 해볼까요?" autocomplete="off">
+    <input type="text" id="todoinput" placeholder="Tell me your plan" autocomplete="off" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Tell me your plan'">
   </form>
   
   <ul id="todolist">
