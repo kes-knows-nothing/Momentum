@@ -3,6 +3,9 @@ const nameInput = document.querySelector("#nameinput")
 const mainBox = document.querySelector("#mainBox")
 const clock = document.querySelector("#clock")
 const todoInput1 = document.querySelector("#todoinput")
+const logoutForm = document.querySelector("#logoutForm")
+const logoutButton = document.querySelector("#logoutButton")
+
 const today = new Date();
 const hour = String(today.getHours()).padStart(2,0);
 const minute = String(today.getMinutes()).padStart(2,0);
@@ -11,7 +14,12 @@ clock.innerText = `${hour}:${minute}:${second}`
 
 
 // 3. 시간에 따라서 인사말 달리하기 
+const logoutplz = () => {
+  localStorage.removeItem("username")
+  location.reload();
+}
 
+logoutButton.addEventListener("click", logoutplz)
 
 // 1. 먼저 이름 벨류 값을 받기
 function hello(event) {
@@ -52,15 +60,18 @@ setInterval(whatTime, 1000)
 const savedUsername = localStorage.getItem("username")
 
 if (savedUsername === null) {
+  logoutButton.classList.add("hide")
   nameForm.classList.remove("hide");
   todoInput1.classList.add("hide")
   nameForm.addEventListener("submit", hello);
   
 } else {
+  logoutButton.classList.remove("hide")
   todoInput1.classList.remove("hide");
   nameForm.classList.add("hide")
   const nameBox = document.createElement("h2");
   mainBox.appendChild(nameBox);
+  logoutForm.classList.remove("hide")
   // 3번 세부 조건 설정
   if (hour >= 17 || hour < 4) {
    nameBox.innerText = `Good Evening, ${savedUsername}`;
@@ -70,3 +81,5 @@ if (savedUsername === null) {
     nameBox.innerText = `Good Afternoon, ${savedUsername}`;
    }
 }
+
+
