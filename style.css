@@ -119,9 +119,8 @@ img {
 }
 
 #todolist {
-  
   position: absolute;
-  top: 750px
+  top: 720px
 }
 #todolist li {
   margin-bottom: 10px;
@@ -138,7 +137,6 @@ img {
 }
 
 #weather {
-
   position: absolute;
   left:10px;
   top: 5px;
