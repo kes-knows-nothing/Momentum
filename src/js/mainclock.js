@@ -16,6 +16,7 @@ clock.innerText = `${hour}:${minute}:${second}`
 // 3. 시간에 따라서 인사말 달리하기 
 const logoutplz = () => {
   localStorage.removeItem("username")
+  localStorage.removeItem("toDos")
   location.reload();
 }
 
